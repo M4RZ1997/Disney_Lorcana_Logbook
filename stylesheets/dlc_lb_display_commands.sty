@@ -242,20 +242,20 @@
 				\draw[gray, very thick, text=white] (12.5cm,0.2cm) -- (12.5cm,-0.2cm) node at (12.5cm,0.4 cm) {\small{\fpeval{round(\maxValue/\sum*100,2)}\%}};%
 				
 				% Color Icons
-	      		\node[inner sep=0pt] at (0.3cm,-0.4cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Amber.png}};%
-	      		\node[inner sep=0pt] at (0.3cm,-1.2cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Amethyst.png}};%
-	      		\node[inner sep=0pt] at (0.3cm,-2cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Emerald.png}};%
-	      		\node[inner sep=0pt] at (0.3cm,-2.8cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Ruby.png}};%
-	      		\node[inner sep=0pt] at (0.3cm,-3.6cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Sapphire.png}};%
-	      		\node[inner sep=0pt] at (0.3cm,-4.4cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Steel.png}};%
+	      		\node[inner sep=0pt] at (0.3cm,-0.4cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Emerald.png}};%
+	      		\node[inner sep=0pt] at (0.3cm,-1.2cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Steel.png}};%
+	      		\node[inner sep=0pt] at (0.3cm,-2cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Ruby.png}};%
+	      		\node[inner sep=0pt] at (0.3cm,-2.8cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Amber.png}};%
+	      		\node[inner sep=0pt] at (0.3cm,-3.6cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Amethyst.png}};%
+	      		\node[inner sep=0pt] at (0.3cm,-4.4cm) {\includegraphics[width=17pt, keepaspectratio]{images/colors/Sapphire.png}};%
 	      		
 	      		% Bars
-	      		\draw[fill=LorcanaAmber] (0.7cm, -0.2cm) rectangle ++(\fpeval{(#1/\maxValue)*11.8}cm, -0.4cm);%
-	      		\draw[fill=LorcanaAmethyst] (0.7cm, -1cm) rectangle ++(\fpeval{(#2/\maxValue)*11.8}cm, -0.4cm);%
-	      		\draw[fill=LorcanaEmerald] (0.7cm, -1.8cm) rectangle ++(\fpeval{(#3/\maxValue)*11.8}cm, -0.4cm);%
-	      		\draw[fill=LorcanaRuby] (0.7cm, -2.6cm) rectangle ++(\fpeval{(#4/\maxValue)*11.8}cm, -0.4cm);%
-	      		\draw[fill=LorcanaSapphire] (0.7cm, -3.4cm) rectangle ++(\fpeval{(#5/\maxValue)*11.8}cm, -0.4cm);%
-	      		\draw[fill=LorcanaSteel] (0.7cm, -4.2cm) rectangle ++(\fpeval{(#6/\maxValue)*11.8}cm, -0.4cm);%
+	      		\draw[fill=LorcanaEmerald] (0.7cm, -0.2cm) rectangle ++(\fpeval{(#1/\maxValue)*11.8}cm, -0.4cm);%
+	      		\draw[fill=LorcanaSteel] (0.7cm, -1cm) rectangle ++(\fpeval{(#2/\maxValue)*11.8}cm, -0.4cm);%
+	      		\draw[fill=LorcanaRuby] (0.7cm, -1.8cm) rectangle ++(\fpeval{(#3/\maxValue)*11.8}cm, -0.4cm);%
+	      		\draw[fill=LorcanaAmber] (0.7cm, -2.6cm) rectangle ++(\fpeval{(#4/\maxValue)*11.8}cm, -0.4cm);%
+	      		\draw[fill=LorcanaAmethyst] (0.7cm, -3.4cm) rectangle ++(\fpeval{(#5/\maxValue)*11.8}cm, -0.4cm);%
+	      		\draw[fill=LorcanaSapphire] (0.7cm, -4.2cm) rectangle ++(\fpeval{(#6/\maxValue)*11.8}cm, -0.4cm);%
 	      		
 	      		\draw[gray, very thick] (0.7cm,0.3cm) -- (0.7,-5cm);%
 			\end{tikzpicture}%
@@ -269,8 +269,301 @@
 
 
 
+% ------------------------------------------------------------------------------------------------- %
+% ################################################################################################# %
+% -------------------------------------- Starter Deck Frames -------------------------------------- %
+% #+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+# %
+% #+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+# Shading  Variants #+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+# %
+\pgfdeclarehorizontalshading{AmberAmethyst}{4cm}{%
+	color(0cm)=(LorcanaAmber);%
+	color(2cm)=(LorcanaAmber);%
+	color(4cm)=(LorcanaAmethyst);%
+	color(6cm)=(LorcanaAmethyst)%
+}%
+\pgfdeclarehorizontalshading{AmberSapphire}{4cm}{%
+	color(0cm)=(LorcanaAmber);%
+	color(2cm)=(LorcanaAmber);%
+	color(4cm)=(LorcanaSapphire);%
+	color(6cm)=(LorcanaSapphire)%
+}%
+\pgfdeclarehorizontalshading{AmethystSapphire}{4cm}{%
+	color(0cm)=(LorcanaAmethyst);%
+	color(2cm)=(LorcanaAmethyst);%
+	color(4cm)=(LorcanaSapphire);%
+	color(6cm)=(LorcanaSapphire)%
+}%
+\pgfdeclarehorizontalshading{EmeraldAmber}{4cm}{%
+	color(0cm)=(LorcanaEmerald);%
+	color(2cm)=(LorcanaEmerald);%
+	color(4cm)=(LorcanaAmber);%
+	color(6cm)=(LorcanaAmber)%
+}%
+\pgfdeclarehorizontalshading{EmeraldAmethyst}{4cm}{%
+	color(0cm)=(LorcanaEmerald);%
+	color(2cm)=(LorcanaEmerald);%
+	color(4cm)=(LorcanaAmethyst);%
+	color(6cm)=(LorcanaAmethyst)%
+}%
+\pgfdeclarehorizontalshading{EmeraldRuby}{4cm}{%
+	color(0cm)=(LorcanaEmerald);%
+	color(2cm)=(LorcanaEmerald);%
+	color(4cm)=(LorcanaRuby);%
+	color(6cm)=(LorcanaRuby)%
+}%
+\pgfdeclarehorizontalshading{EmeraldSapphire}{4cm}{%
+	color(0cm)=(LorcanaEmerald);%
+	color(2cm)=(LorcanaEmerald);%
+	color(4cm)=(LorcanaSapphire);%
+	color(6cm)=(LorcanaSapphire)%
+}%
+\pgfdeclarehorizontalshading{EmeraldSteel}{4cm}{%
+	color(0cm)=(LorcanaEmerald);%
+	color(2cm)=(LorcanaEmerald);%
+	color(4cm)=(LorcanaSteel);%
+	color(6cm)=(LorcanaSteel)%
+}%
+\pgfdeclarehorizontalshading{RubyAmber}{4cm}{%
+	color(0cm)=(LorcanaRuby);%
+	color(2cm)=(LorcanaRuby);%
+	color(4cm)=(LorcanaAmber);%
+	color(6cm)=(LorcanaAmber)%
+}%
+\pgfdeclarehorizontalshading{RubyAmethyst}{4cm}{%
+	color(0cm)=(LorcanaRuby);%
+	color(2cm)=(LorcanaRuby);%
+	color(4cm)=(LorcanaAmethyst);%
+	color(6cm)=(LorcanaAmethyst)%
+}%
+\pgfdeclarehorizontalshading{RubySapphire}{4cm}{%
+	color(0cm)=(LorcanaRuby);%
+	color(2cm)=(LorcanaRuby);%
+	color(4cm)=(LorcanaSapphire);%
+	color(6cm)=(LorcanaSapphire)%
+}%
+\pgfdeclarehorizontalshading{SteelAmber}{4cm}{%
+	color(0cm)=(LorcanaSteel);%
+	color(2cm)=(LorcanaSteel);%
+	color(4cm)=(LorcanaAmber);%
+	color(6cm)=(LorcanaAmber)%
+}%
+\pgfdeclarehorizontalshading{SteelAmethyst}{4cm}{%
+	color(0cm)=(LorcanaSteel);%
+	color(2cm)=(LorcanaSteel);%
+	color(4cm)=(LorcanaAmethyst);%
+	color(6cm)=(LorcanaAmethyst)%
+}%
+\pgfdeclarehorizontalshading{SteelRuby}{4cm}{%
+	color(0cm)=(LorcanaSteel);%
+	color(2cm)=(LorcanaSteel);%
+	color(4cm)=(LorcanaRuby);%
+	color(6cm)=(LorcanaRuby)%
+}%
+\pgfdeclarehorizontalshading{SteelSapphire}{4cm}{%
+	color(0cm)=(LorcanaSteel);%
+	color(2cm)=(LorcanaSteel);%
+	color(4cm)=(LorcanaSapphire);%
+	color(6cm)=(LorcanaSapphire)%
+}%
+% ------------------------------------------------------------------------------------------------- %
+% #+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+# %
+% #+#+#+#+#+#+#+#+#+#+#+#+#+#+#  Starter Decks Win/Lose Distribution  #+#+#+#+#+#+#+#+#+#+#+#+#+#+# %
+\newcounter{tempStarterWinNumber}
+\newcommand{\frameStarterWinLoseStatistic}{%
+	\setcounter{tempStarterWinNumber}{0}%
+	\pgfmathsetmacro{\startergamestotal}{\DTLrowcount{LogBookStarter1v1} + \DTLrowcount{LogBookStarter3Player} + \DTLrowcount{LogBookStarter4Player}}%
+	\DTLforeach{LogBookStarter1v1}{\lbWinOrLose=WinOrLose}{%
+		\ifthenelse{\equal{WIN}{\lbWinOrLose}}{\stepcounter{tempStarterWinNumber}}{}%
+	}%
+	\DTLforeach{LogBookStarter3Player}{\lbWinOrLose=WinOrLose}{%
+		\ifthenelse{\equal{WIN}{\lbWinOrLose}}{\stepcounter{tempStarterWinNumber}}{}%
+	}%
+	\DTLforeach{LogBookStarter4Player}{\lbWinOrLose=WinOrLose}{%
+		\ifthenelse{\equal{WIN}{\lbWinOrLose}}{\stepcounter{tempStarterWinNumber}}{}%
+	}%
+	\FPset{starterwinpercentage}{0}%
+	\FPeval{starterwinpercentage}{round(\thetempStarterWinNumber/\startergamestotal*100,2)}%
+	\FPeval{starterlosepercentage}{round(100-\starterwinpercentage,2)}%
+	\frameWinLoseStatistic{\starterwinpercentage}{\starterlosepercentage}%
+}%
+% ------------------------------------------------------------------------------------------------- %
+% #+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+# %
+% #+#+#+#+#+#+#+#+#+#+#+#+#+#+# Starter Decks Color Combination Frame #+#+#+#+#+#+#+#+#+#+#+#+#+#+# %
+\newcommand{\frameStarterColorCombinationAppearances}{%
+	{\Large%
+	\begin{tikzpicture}[remember picture,overlay]%
+		\node[posLandsStyle] at (current page.center) {%
+			\begin{tikzpicture}%
+				\node[xshift=3.5cm,yshift=0.7cm] (Header) {\textcolor{white}{\Huge{\titlefont{Color Combination Distribution}}}};%
+				\node at (20cm, 0cm) {};
+				\pgfmathsetmacro{\maxValue}{\mlTimesAppearanceNumber}%
+				\pgfmathsetmacro{\sum}{\DTLrowcount{LogBookStarter1v1} + \DTLrowcount{LogBookStarter3Player} + \DTLrowcount{LogBookStarter4Player}}%
+				
+				\pgfmathsetmacro{\maxValue}{\maxValue == 0 ? 1 : \maxValue}
+				\pgfmathsetmacro{\sum}{\sum == 0 ? 1 : \sum}
+				
+				\draw[gray, very thick, text=white] (-0.5cm,0.3cm) -- (-0.5,-5cm);%
+				
+				\foreach \y in {1,...,3}%
+					\draw[gray!50] (-0.65cm,\fpeval{1.1*\y -4.4}cm) -- (-0.5cm,\fpeval{1.1*\y -4.4}cm);%
+				\draw[gray, very thick, text=white] (-0.7cm,0cm) -- (-0.3cm,0cm) node at (-1.25cm,0cm) {\small{\fpeval{round(\maxValue/\sum*100,2)}\%}};%
+				\draw[gray, very thick, text=white] (-0.7cm,-4.4cm) -- (-0.3cm,-4.4cm) node at (-1.25cm,-4.4cm) {\small{0\%}};%
+				\draw[gray, very thick] (-0.8cm,-4.8cm) -- (19cm,-4.8cm);%
+				
+				\newcounter{tempStepCCCounter}
+				\setcounter{tempStepCCCounter}{0}				
+				\foreach \lColorCombination in \listColorCombinations {%
+					\stepcounter{tempStepCCCounter}%
+					
+					\setcounter{tempAppearanceNumber}{0}
+					\DTLforeach{LogBookStarter1v1}{\lbDeckColor=ColorCombination}{%
+						\ifthenelse{\equal{\lColorCombination}{\lbDeckColor}}{\stepcounter{tempAppearanceNumber}}{}%
+					}%
+					\DTLforeach{LogBookStarter3Player}{\lbDeckColor=ColorCombination}{%
+						\ifthenelse{\equal{\lColorCombination}{\lbDeckColor}}{\stepcounter{tempAppearanceNumber}}{}%
+					}%
+					\DTLforeach{LogBookStarter4Player}{\lbDeckColor=ColorCombination}{%
+						\ifthenelse{\equal{\lColorCombination}{\lbDeckColor}}{\stepcounter{tempAppearanceNumber}}{}%
+					}%
+					
+					\draw[shading=\lColorCombination,shading angle=-70] (\fpeval{1.2*\thetempStepCCCounter - 0.75}cm, -4.8cm) rectangle ++(0.8cm, \fpeval{(\thetempAppearanceNumber/\maxValue)*4.4 + 0.4}cm);%
+					\node at (\fpeval{1.2*\thetempStepCCCounter - 0.35}cm, -4.8cm) {\includegraphics[width=25pt, keepaspectratio]{images/colors/\lColorCombination .png}};
+				}%
+			\end{tikzpicture}%
+		};%
+	\end{tikzpicture}%
+	}%
+}%
+% ------------------------------------------------------------------------------------------------- %
+% #+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+# %
+% #+#+#+#+#+#+#+#+#+#+#+#+#+#+# Starter Decks Color Combination Frame #+#+#+#+#+#+#+#+#+#+#+#+#+#+# %
 
+% ------------------------------------------------------------------------------------------------- %
+% #+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+#+# %
+% #+#+#+#+#+#+#+#+#+#+#+# Starter Decks Most/Least Played Color Combination #+#+#+#+#+#+#+#+#+#+#+# %
+% Key-Value Structure
+\ExplSyntaxOn
 
+% Create a property list
+\prop_new:N \l_color_combination
+
+% Populate the property list
+\prop_put:Nnn \l_color_combination {EmeraldSteel} {Emerald~Steel}
+\prop_put:Nnn \l_color_combination {EmeraldRuby} {Emerald~Ruby}
+\prop_put:Nnn \l_color_combination {EmeraldAmber} {Emerald~Amber}
+\prop_put:Nnn \l_color_combination {EmeraldAmethyst} {Emerald~Amethyst}
+\prop_put:Nnn \l_color_combination {EmeraldSapphire} {Emerald~Sapphire}
+\prop_put:Nnn \l_color_combination {SteelRuby} {Steel~Ruby}
+\prop_put:Nnn \l_color_combination {SteelAmber} {Steel~Amber}
+\prop_put:Nnn \l_color_combination {SteelAmethyst} {Steel~Amethyst}
+\prop_put:Nnn \l_color_combination {SteelSapphire} {Steel~Sapphire}
+\prop_put:Nnn \l_color_combination {RubyAmber} {Ruby~Amber}
+\prop_put:Nnn \l_color_combination {RubyAmethyst} {Ruby~Amethyst}
+\prop_put:Nnn \l_color_combination {RubySapphire} {Ruby~Sapphire}
+\prop_put:Nnn \l_color_combination {AmberAmethyst} {Amber~Amethyst}
+\prop_put:Nnn \l_color_combination {AmberSapphire} {Amber~Sapphire}
+\prop_put:Nnn \l_color_combination {AmethystSapphire} {Amethyst~Sapphire}
+
+% Define a command to retrieve values by key
+\NewDocumentCommand{\getKeyValue}{m}{%
+	\prop_get:NnNTF \l_color_combination {#1} \l_tmpa_tl
+		{ \tl_use:N \l_tmpa_tl }
+		{ Key~`#1'~undefined }
+}
+% Calculator
+\newcommand{\calcMostLeastStarterColorCombination}[1]{%
+	\foreach \lColorCombination in \listColorCombinations {%
+		\setcounter{tempAppearanceNumber}{0}
+		\DTLforeach{LogBookStarter1v1}{\lbDeckColorCombination=ColorCombination}{%
+			\ifthenelse{\equal{\lColorCombination}{\lbDeckColorCombination}}{\stepcounter{tempAppearanceNumber}}{}%
+		}%
+		\DTLforeach{LogBookStarter3Player}{\lbDeckColorCombination=ColorCombination}{%
+			\ifthenelse{\equal{\lColorCombination}{\lbDeckColorCombination}}{\stepcounter{tempAppearanceNumber}}{}%
+		}%
+		\DTLforeach{LogBookStarter4Player}{\lbDeckColorCombination=ColorCombination}{%
+			\ifthenelse{\equal{\lColorCombination}{\lbDeckColorCombination}}{\stepcounter{tempAppearanceNumber}}{}%
+		}%
+		\ifthenelse{\equal{#1}{>} \AND \equal{\mlTimesAppearanceNumber}{-1}}{
+			\xdef\mlTimesAppearanceNumber{\thetempAppearanceNumber}\relax%
+			\xdef\mlTrackedColorCombination{\lColorCombination}\relax%
+			\xdef\mlColorCombinationName{\getKeyValue{\lColorCombination}}\relax%
+		}{}
+		\ifthenelse{\mlTimesAppearanceNumber #1 \thetempAppearanceNumber}{%
+			\xdef\mlTimesAppearanceNumber{\thetempAppearanceNumber}\relax%
+			\xdef\mlTrackedColorCombination{\lColorCombination}\relax%
+			\xdef\mlColorCombinationName{\getKeyValue{\lColorCombination}}\relax%
+		}{}%
+	}%
+}%
+% Char-in-String Check
+\makeatletter
+\def\instring#1#2{TT\fi\begingroup
+  \edef\x{\endgroup\noexpand\in@{#1}{#2}}\x\ifin@}
+\makeatother
+% Calculation and Plotter
+\newcounter{tempColorCounter}%
+\newcounter{tempColorWinCounter}%
+\newcounter{tempHelper}%
+\newcommand{\frameStarterColorWinDistribution}{%
+	\begin{tikzpicture}
+		\node at (0,0) {};
+		
+		% Color Icons
+		\filldraw[fill=white] (1cm,-0.4cm) circle (5pt);%
+		\node[inner sep=0pt] at (1.025cm,-0.2cm) {\textcolor{black}{\LARGE \MtGIcons{x}}};%
+		\filldraw[fill=white] (1.5cm,-0.4cm) circle (5pt);%
+		\node[inner sep=0pt] at (1.525cm,-0.2cm) {\textcolor{black}{\LARGE \MtGIcons{a}}};%
+		\filldraw[fill=white] (2cm,-0.4cm) circle (5pt);%
+		\node[inner sep=0pt] at (2.025cm,-0.2cm) {\textcolor{MarzRoyal!80}{\LARGE \MtGIcons{b}}};%
+		\filldraw[fill=white] (2.5cm,-0.4cm) circle (5pt);%
+		\node[inner sep=0pt] at (2.525cm,-0.2cm) {\textcolor{MarzPurple}{\LARGE \MtGIcons{c}}};%
+		\filldraw[fill=white] (3cm,-0.4cm) circle (5pt);%
+		\node[inner sep=0pt] at (3.025cm,-0.2cm) {\textcolor{MarzDarkRed}{\LARGE \MtGIcons{d}}};%
+		\filldraw[fill=white] (3.5cm,-0.4cm) circle (5pt);%
+		\node[inner sep=0pt] at (3.525cm,-0.2cm) {\textcolor{MarzGreen!80}{\LARGE \MtGIcons{e}}};%
+		
+		\foreach \y in {0,...,4} {%
+			\node[anchor=east] at (0.5cm,\fpeval{-1.25*\y - 1}cm) {\fpeval{25*\y}\%};%
+		}%
+		\draw[gray, very thick, text=white] (0.6cm,-0.2cm) -- (0.6cm,-6.25cm);%
+		
+		\setcounter{tempHelper}{0}%
+		\foreach \color in \listColors {%
+			\stepcounter{tempHelper}
+			\setcounter{tempColorCounter}{0}%
+			\setcounter{tempColorWinCounter}{0}%
+			\DTLforeach{LogBookPreCon1v1}{\tempDeckColor=DeckColor, \tempWinOrLose=WinOrLose}{%
+				\if\instring{\color}{\tempDeckColor}%
+					\stepcounter{tempColorCounter}%
+					\ifthenelse{\equal{WIN}{\tempWinOrLose}}{%
+						\stepcounter{tempColorWinCounter}%
+					}{}%
+				\else\fi%
+			}%
+			\DTLforeach{LogBookPreCon3Player}{\tempDeckColor=DeckColor, \tempWinOrLose=WinOrLose}{%
+				\if\instring{\color}{\tempDeckColor}%
+					\stepcounter{tempColorCounter}%
+					\ifthenelse{\equal{WIN}{\tempWinOrLose}}{%
+						\stepcounter{tempColorWinCounter}%
+					}{}%
+				\else\fi%
+			}%
+			\DTLforeach{LogBookPreCon4Player}{\tempDeckColor=DeckColor, \tempWinOrLose=WinOrLose}{%
+				\if\instring{\color}{\tempDeckColor}%
+					\stepcounter{tempColorCounter}%
+					\ifthenelse{\equal{WIN}{\tempWinOrLose}}{%
+						\stepcounter{tempColorWinCounter}%
+					}{}%
+				\else\fi%
+			}%
+			
+			\pgfmathsetmacro{\colorsum}{\thetempColorCounter == 0 ? 1 : \thetempColorCounter}%
+			
+			\draw[shading=\color,shading angle=-70] (\fpeval{0.5*\thetempHelper + 0.35}cm, -0.6cm) rectangle ++(0.3cm, \fpeval{-(\thetempColorWinCounter/\colorsum)*5 - 0.4}cm);%
+		}%
+		
+		\draw[gray, very thick, text=white] (-0.2cm,-0.6cm) -- (4cm,-0.6cm);%
+	\end{tikzpicture}%
+}%
 
 
 
@@ -334,57 +627,6 @@
 % ------------------------------------------------------------------------------------------------- %
 % ################################################################################################# %
 % ------------------------- Most/Least PreCon  Color Identity Appearances ------------------------- %
-% Key-Value Structure
-\ExplSyntaxOn
-
-% Create a property list
-\prop_new:N \l_color_identity
-
-% Populate the property list
-\prop_put:Nnn \l_color_identity {C} {Colorless}
-\prop_put:Nnn \l_color_identity {W} {White}
-\prop_put:Nnn \l_color_identity {U} {Blue}
-\prop_put:Nnn \l_color_identity {B} {Black}
-\prop_put:Nnn \l_color_identity {R} {Red}
-\prop_put:Nnn \l_color_identity {G} {Green}
-
-\prop_put:Nnn \l_color_identity {WU} {Azorius}
-\prop_put:Nnn \l_color_identity {WB} {Orzhov}
-\prop_put:Nnn \l_color_identity {WR} {Boros}
-\prop_put:Nnn \l_color_identity {WG} {Selesnya}
-\prop_put:Nnn \l_color_identity {UB} {Dimir}
-\prop_put:Nnn \l_color_identity {UR} {Izzet}
-\prop_put:Nnn \l_color_identity {UG} {Simic}
-\prop_put:Nnn \l_color_identity {BR} {Rakdos}
-\prop_put:Nnn \l_color_identity {BG} {Golgari}
-\prop_put:Nnn \l_color_identity {RG} {Gruul}
-
-\prop_put:Nnn \l_color_identity {WUB} {Esper}
-\prop_put:Nnn \l_color_identity {WUR} {Jeskai}
-\prop_put:Nnn \l_color_identity {WUG} {Bant}
-\prop_put:Nnn \l_color_identity {WBR} {Mardu}
-\prop_put:Nnn \l_color_identity {WBG} {Abzan}
-\prop_put:Nnn \l_color_identity {WRG} {Naya}
-\prop_put:Nnn \l_color_identity {UBR} {Grixis}
-\prop_put:Nnn \l_color_identity {UBG} {Sultai}
-\prop_put:Nnn \l_color_identity {URG} {Temur}
-\prop_put:Nnn \l_color_identity {BRG} {Jund}
-
-\prop_put:Nnn \l_color_identity {WUBR} {Dune}
-\prop_put:Nnn \l_color_identity {WUBG} {Glint}
-\prop_put:Nnn \l_color_identity {WURG} {Ink}
-\prop_put:Nnn \l_color_identity {WBRG} {Witch}
-\prop_put:Nnn \l_color_identity {UBRG} {Yore}
-
-\prop_put:Nnn \l_color_identity {WUBRG} {Rainbow}
-
-% Define a command to retrieve values by key
-\NewDocumentCommand{\getKeyValue}{m}{%
-	\prop_get:NnNTF \l_color_identity {#1} \l_tmpa_tl
-		{ \tl_use:N \l_tmpa_tl }
-		{ Key~`#1'~undefined }
-}
-
 \ExplSyntaxOff
 % Calculation
 \newcommand{\calcMostLeastPreConColorIdentity}[1]{%
@@ -739,9 +981,6 @@
   \edef\x{\endgroup\noexpand\in@{#1}{#2}}\x\ifin@}
 \makeatother
 % Calculation and Plotter
-\newcounter{tempColorCounter}%
-\newcounter{tempColorWinCounter}%
-\newcounter{tempHelper}%
 \newcommand{\printPreConColorWinDistribution}{%
 	\begin{tikzpicture}
 		\node at (0,0) {};

@@ -1,20 +1,18 @@
 \DTLnewdb{LogBookStarter3Player}
 
-%\newcommand{\addpreconthreeplayerentry}[9]{%
-%	\DTLnewrow{LogBookPreCon3Player}%
-%	\setPreconInformation{LogBookPreCon3Player}#1%
-%	\DTLnewdbentry{LogBookPreCon3Player}{WinOrLose}{#2}%
-%	\setThreePlayerFinishPosition{LogBookPreCon3Player}{#3}%
-%	\setThreePlayerFastMana{LogBookPreCon3Player}{#4}%
-%	\setFirstKillAndTurnNumber{LogBookPreCon3Player}#5%
-%	\conditionalSet{\listWinConditions}{LogBookPreCon3Player}{WinCondition}{#6}%
-%	\DTLnewdbentry{LogBookPreCon3Player}{MulliganNumber}{#7}%
-%	\conditionalSet{\listMulliganCauses}{LogBookPreCon3Player}{MulliganCause}{#8}%
-%	\conditionalSet{\listObviousProblems}{LogBookPreCon3Player}{ObviousProblems}{#9}%
-%}
-%
-%% Real Games
-%\addpreconthreeplayerentry{{WUR}{Toolbox}}{LOSE}{SELF/2,1/1,2/3,3/2}{NO/NO/YES}{{11}{12}}{HP0}{0}{None}{None}%
-%\addpreconthreeplayerentry{{WUR}{Toolbox}}{WIN}{SELF/1,1/3,2/2,3/1}{NO/NO/NO}{{14}{14}}{HP0}{0}{None}{LackOfResponses}%
-%\addpreconthreeplayerentry{{WUR}{Toolbox}}{WIN}{SELF/1,1/2,2/1,3/3}{NO/NO/NO}{{12}{12}}{HP0}{0}{None}{None}%
-%\addpreconthreeplayerentry{{WUB}{Token}}{WIN}{SELF/1,1/1,2/3,3/2}{NO/Yes/NO}{{9}{10}}{HP0}{0}{None}{ManaScrew}%
+\newcommand{\addstarterthreeplayerentry}[5]{%
+	\DTLnewrow{LogBookStarter3Player}%
+	\conditionalSet{\listColorCombinations}{LogBookStarter3Player}{ColorCombination}{#1}%
+	\conditionalSet{\listDeckArchetypes}{LogBookStarter3Player}{DeckArchetype}{#2}%
+	\DTLnewdbentry{LogBookStarter3Player}{WinOrLose}{#3}%
+	\DTLnewdbentry{LogBookStarter3Player}{WinnerStart}{#4}%
+	\DTLnewdbentry{LogBookStarter3Player}{TurnNumber}{#5}%
+}%
+
+% Testing
+\addstarterthreeplayerentry{RubyAmber}{Midrange}{WIN}{2}{7}%
+\addstarterthreeplayerentry{AmberAmethyst}{Aggro}{WIN}{3}{10}%
+\addstarterthreeplayerentry{EmeraldRuby}{Combo}{LOSE}{1}{6}%
+\addstarterthreeplayerentry{EmeraldSteel}{Aggro}{WIN}{2}{12}%
+\addstarterthreeplayerentry{SteelSapphire}{Ramp}{LOSE}{1}{11}%
+\addstarterthreeplayerentry{RubySapphire}{Midrange}{WIN}{3}{8}%

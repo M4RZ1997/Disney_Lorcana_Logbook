@@ -119,19 +119,42 @@
 	%\calculateGeneralDeckStatistics{Arachnophobia}{LogBook1v1}{LogBook3Player}{LogBook4Player}%
 	
 	% Win/Lose Statistic
-	\frameWinLoseStatistic{50}{50}
+	\frameStarterWinLoseStatistic
 	
 	% Average Finish Position Statistic
-	\begin{tikzpicture}
-		\node {};
-	\end{tikzpicture}
 	
 	% Color Match-Up OR Turn Number Statistic
-	\frameColorMatchUpStatistic{2}{5}{3}{2}{1}{4}%
+	\calcMostLeastStarterColorCombination{<}
+	\frameStarterColorCombinationAppearances
 	
 	% In-Depth Statistics
 	\begin{tikzpicture}[remember picture,overlay]
-		% Deck Banner OR Fast Mana to Win/Lose Frame
-		\frameDeckBanner{Starter_Deck}%
+		% Starter Deck Icon
+		\node[xshift=767pt, yshift=-60pt] {%
+			\includegraphics[width = 190pt, height = 200pt, keepaspectratio]{images/deck_crests/Starter_Deck.png}%
+		};%
+		
+		% Most Played Color Combination
+		\node[xshift=771.5pt, yshift=-192.5pt, text width=136pt, anchor=north, inner sep=0pt, outer sep=0pt, align=center] {%
+			\color{white}{\large \textsc{Most Played Color Combination}}
+		};
+		\node[xshift=771.5pt, yshift=-277.5pt, text width=136pt, inner sep=0pt, outer sep=0pt, align=center] {%
+			\includegraphics[width = 120pt, height = 120pt, keepaspectratio]{images/colors/\mlTrackedColorCombination.png}%
+		};
+		\node[xshift=771.5pt, yshift=-340pt, text width=136pt, anchor=north, inner sep=0pt, outer sep=0pt, align=center] {%
+			\color{white}The most played Color-Combination is\linebreak\textbf{\mlColorCombinationName}\linebreak(\mlTimesAppearanceNumber~Games played)\\
+		};%
+		
+		% Least Played Color Combination
+		\calcMostLeastStarterColorCombination{>}
+		\node[xshift=935pt, yshift=-192.5pt, text width=136pt, anchor=north, inner sep=0pt, outer sep=0pt, align=center] {%
+			\color{white}{\large \textsc{Least Played Color Combination}}
+		};
+		\node[xshift=935pt, yshift=-277.5pt, text width=136pt, inner sep=0pt, outer sep=0pt, align=center] {%
+			\includegraphics[width = 120pt, height = 120pt, keepaspectratio]{images/colors/\mlTrackedColorCombination.png}%
+		};
+		\node[xshift=935pt, yshift=-340pt, text width=136pt, anchor=north, inner sep=0pt, outer sep=0pt, align=center] {%
+			\color{white}The least played Color-Combination is\linebreak\textbf{\mlColorCombinationName}\linebreak(\mlTimesAppearanceNumber~Games played)\\
+		};%
 	\end{tikzpicture}
 \end{document}
